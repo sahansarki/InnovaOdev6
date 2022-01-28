@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">InnovaOdev6</string>
+    <string name="food">Yemek</string>
+    <string name="flower">Çiçek</string>
+    <string name="market">Market</string>
+    <string name="water">Su</string>
+</resources>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.MainActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarFoodScreen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:titleTextColor="@color/toolbarTitle" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/foodChip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/food"
+            app:chipBackgroundColor="@color/chipWhite"
+            app:layout_constraintEnd_toStartOf="@+id/flowerChip"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/marketChip"
+            app:layout_constraintTop_toBottomOf="@+id/toolbarFoodScreen" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/flowerChip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/flower"
+            app:chipBackgroundColor="@color/chipWhite"
+            app:layout_constraintEnd_toStartOf="@+id/waterChip"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/foodChip"
+            app:layout_constraintTop_toBottomOf="@+id/toolbarFoodScreen" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/marketChip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            style="@style/Widget.MyApp.Chip.Choice"
+            android:checked="true"
+            android:text="@string/market"
+            app:chipBackgroundColor="@color/chipWhite"
+            app:layout_constraintEnd_toStartOf="@+id/foodChip"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbarFoodScreen" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/waterChip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/water"
+            app:chipBackgroundColor="@color/chipWhite"
+            app:layout_constraintStart_toEndOf="@+id/flowerChip"
+            app:layout_constraintTop_toBottomOf="@+id/toolbarFoodScreen" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/foodRecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/foodChip" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
